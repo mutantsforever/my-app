@@ -44,6 +44,7 @@ class Loginscreen extends Component {
       </div>
     );
   }
+//For validations
 
 //   handleClick(event){
 //     // console.log("event",event);
