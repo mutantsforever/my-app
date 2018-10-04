@@ -1,3 +1,4 @@
-git add .
-git commit -m "Made changes"
-git push origin master
+call git add .
+call git commit -am "made changes"
+call git push
+pause
