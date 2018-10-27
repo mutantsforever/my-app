@@ -37,7 +37,8 @@ class Loginscreen extends Component {
                labelColor= '#fff'
                style={style}
                buttonStyle={{ borderRadius: 25 }}
-               onClick={(event) => this.handleClick(event)}/>
+               onClick={(event) => this.handleClick(event)}
+               />
            </div>
           </MuiThemeProvider>
         </div>
