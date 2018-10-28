@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import ButtonAppBar from './Header';
 // import Content from './Content';
@@ -34,19 +35,29 @@ class App extends Component {
         }
         this.setStateHandler = this.setStateHandler.bind(this)
         this.setStateRemove = this.setStateRemove.bind(this)
+        this.forceUpdateHandler = this.forceUpdateHandler.bind(this)
+        this.findDomNodeHandler = this.findDomNodeHandler.bind(this)
     };
         setStateHandler(){
             var item = "Test "
             var myarray = this.state.det.slice()
                 myarray.push(item)
             this.setState({det : myarray})
-        }
+        };
         setStateRemove(){
             var item = "Test "
             var myarray = this.state.det.slice()
                 myarray.pop(item)
             this.setState({det : myarray})
+        };
+        forceUpdateHandler(){
+            this.forceUpdate();
         }
+        findDomNodeHandler(){
+            var myDiv = document.getElementById("myDiv");
+            ReactDOM.findDOMNode(myDiv).style.color = "red";
+        }
+
     render(){
         return(
             <div>
@@ -75,6 +86,17 @@ class App extends Component {
                 <button onClick = {this.setStateHandler}>Item added</button>
                 <button onClick = {this.setStateRemove}>Item removed</button>
                 <h4>State Array: {this.state.det}</h4>
+
+                <hr></hr>
+                <button onClick = {this.forceUpdateHandler}>Force Button</button>
+                <h4>Force Update with Randon number: {Math.random()} </h4>
+
+                <hr></hr>
+                <button onClick = {this.findDomNodeHandler}>Find Dom Node</button>
+                <div id="myDiv">
+                    Testing ReactDOM
+                </div>
+
 
               <SimpleBottomNavigation />
             </div>
