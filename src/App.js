@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import ButtonAppBar from './Header';
+import Componentlifecycle from './Componentlifecycle';
 // import Content from './Content';
 // import Loginscreen from './Loginscreen';
 import SimpleBottomNavigation from './Footer';
